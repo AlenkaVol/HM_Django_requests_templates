@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список рецептов</title>
+</head>
+<body>
+<h1>Список рецептов</h1>
+{% for recipe, ingredient in recipes.items %}
+    <ul>
+        <li><a href ="{% url 'recipes' recipe=recipe %}">{{ recipe }}</a></li>
+    </ul>
+{% endfor %}
+</body>
+</html>
+
